@@ -9,6 +9,7 @@ body, html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   color: #fff;
+  overflow-x: hidden;
 }
 
 a {
@@ -27,7 +28,7 @@ button {
 .poster {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -77,9 +78,9 @@ button {
 /* Header Styles */
 .header .title {
   font-family: 'Oswald', sans-serif;
-  font-size: 48px;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
+  font-size: 3rem; /* Changed from px to rem */
+  letter-spacing: 0.2em; /* Adjusted for better scaling */
+  margin-bottom: 0.625rem; /* 10px */
   text-transform: uppercase;
   color: #e50914;
   text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
@@ -87,9 +88,9 @@ button {
 }
 
 .header .tagline {
-  font-size: 20px;
+  font-size: 1.25rem; /* Changed from px to rem */
   font-style: italic;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem; /* 30px */
   color: #ddd;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
   animation: fadeInUp 1s ease-out 0.5s forwards;
@@ -99,19 +100,19 @@ button {
 .main-section {
   display: flex;
   flex-direction: row;
-  align-items: flex-start; /* Changed to prevent vertical alignment issues */
+  align-items: flex-start;
   justify-content: center;
-  gap: 40px;
-  margin-bottom: 30px;
+  gap: 2.5rem; /* 40px */
+  margin-bottom: 1.875rem; /* 30px */
   flex-wrap: wrap;
 }
 
 .main-section .wistia_responsive_padding {
   flex: 1 1 600px;
-  max-width: 800px; /* Adjust based on design */
+  max-width: 800px;
   width: 100%;
   position: relative;
-  padding: 60% 0 0 0; /* 5:3 aspect ratio */
+  padding: 56.25% 0 0 0; /* 16:9 aspect ratio for better compatibility */
   height: 0;
   overflow: hidden;
 }
@@ -133,13 +134,13 @@ button {
 }
 
 .summary {
-  flex: 1 1 300px; /* Ensures summary doesn't take excessive space */
+  flex: 1 1 300px;
   max-width: 600px;
-  font-size: 16px;
+  font-size: 1rem; /* Changed from px to rem */
   line-height: 1.8;
   background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 8px;
+  padding: 1.25rem; /* 20px */
+  border-radius: 0.5rem; /* 8px */
   backdrop-filter: blur(5px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
@@ -149,10 +150,10 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  font-size: 14px;
+  gap: 0.625rem; /* 10px */
+  font-size: 0.875rem; /* 14px */
   line-height: 1.8;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem; /* 30px */
 }
 
 .credits div {
@@ -160,9 +161,9 @@ button {
   max-width: 600px;
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 0.3125rem 1.25rem; /* 5px 20px */
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  border-radius: 0.3125rem; /* 5px */
   transition: background 0.3s ease;
 }
 
@@ -172,7 +173,7 @@ button {
 
 .credits strong {
   color: #e50914;
-  width: 120px;
+  width: 7.5rem; /* 120px */
 }
 
 /* Footer Section */
@@ -180,42 +181,45 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 0.9375rem; /* 15px */
 }
 
 .social-media a {
-  font-size: 20px;
-  margin: 0 10px;
+  font-size: 1.25rem; /* 20px */
+  margin: 0 0.625rem; /* 10px */
   color: #fff;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-media a:hover {
+.social-media a:hover,
+.social-media a:focus {
   color: #e50914;
   transform: scale(1.2);
 }
 
 .footer p {
-  font-size: 12px;
+  font-size: 0.75rem; /* 12px */
   color: #aaa;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 24px;
-  margin-top: 20px;
+  padding: 0.75rem 1.5rem; /* 12px 24px */
+  margin-top: 1.25rem; /* 20px */
   background-color: #e50914;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem; /* 5px */
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #b20710;
-  transform: translateY(-3px);
+  transform: translateY(-0.1875rem); /* 3px */
 }
 
 /* Modal Styles */
@@ -229,13 +233,14 @@ button {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.8);
+  padding: 1rem;
 }
 
 .modal-content {
   position: relative;
-  margin: 10% auto;
+  margin: 5% auto;
   padding: 0;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
 }
 
@@ -243,15 +248,15 @@ button {
   width: 100%;
   height: 450px;
   border: none;
-  border-radius: 10px 10px 0 0;
+  border-radius: 0.625rem 0.625rem 0 0; /* 10px */
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 25px;
+  top: 0.625rem; /* 10px */
+  right: 1.5625rem; /* 25px */
   color: #fff;
-  font-size: 35px;
+  font-size: 2.1875rem; /* 35px */
   font-weight: bold;
   cursor: pointer;
 }
@@ -269,14 +274,15 @@ button {
   }
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .main-section {
     flex-direction: column;
+    align-items: center;
   }
 
   .main-section .wistia_responsive_padding {
     max-width: 100%;
+    padding: 56.25% 0 0 0; /* Maintain 16:9 aspect ratio */
   }
 
   .summary {
@@ -290,24 +296,25 @@ button {
 
   .credits strong {
     width: auto;
+    margin-bottom: 0.3125rem; /* 5px */
   }
 }
 
 @media (max-width: 768px) {
   .header .title {
-    font-size: 36px;
+    font-size: 2.25rem; /* 36px */
   }
 
   .header .tagline {
-    font-size: 18px;
+    font-size: 1.125rem; /* 18px */
   }
 
   .summary {
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
   }
 
   .credits {
-    font-size: 12px;
+    font-size: 0.75rem; /* 12px */
   }
 
   .main-section .wistia_responsive_padding {
@@ -317,23 +324,32 @@ button {
 
 @media (max-width: 480px) {
   .header .title {
-    font-size: 28px;
+    font-size: 1.75rem; /* 28px */
   }
 
   .header .tagline {
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
   }
 
   .summary {
-    font-size: 12px;
+    font-size: 0.75rem; /* 12px */
   }
 
   .credits div {
-    padding: 5px 10px;
+    padding: 0.3125rem 0.625rem; /* 5px 10px */
   }
 
   .social-media a {
-    font-size: 18px;
-    margin: 0 5px;
+    font-size: 1.125rem; /* 18px */
+    margin: 0 0.3125rem; /* 5px */
+  }
+
+  .modal-content iframe {
+    height: 200px;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem; /* 10px 20px */
+    font-size: 0.875rem; /* 14px */
   }
 }
