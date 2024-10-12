@@ -143,6 +143,8 @@ button {
   border-radius: 0.5rem; /* 8px */
   backdrop-filter: blur(5px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  /* Remove margin-top to rely solely on flex-gap */
+  margin-top: 0;
 }
 
 /* Credits Section */
@@ -268,28 +270,14 @@ button {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  /* Adjust iframe height for tablets and below */
-  .modal-content iframe {
-    height: 250px;
-  }
-  
-  /* Main Section Adjustments */
-  .main-section {
-    gap: 1.5rem; /* 24px */
-  }
+/* Responsive Adjustments */
 
-  .summary {
-    font-size: 0.875rem; /* 14px */
-    margin-top: 0.5rem; /* 8px */
-  }
-}
-
+/* Tablets and Below */
 @media (max-width: 1024px) {
   .main-section {
     flex-direction: column;
     align-items: center;
-    gap: 2rem; /* 32px */
+    gap: 1.5rem; /* 24px */
   }
 
   .main-section .wistia_responsive_padding {
@@ -299,7 +287,7 @@ button {
 
   .summary {
     max-width: 100%;
-    margin-top: 1rem; /* 16px */
+    /* Removed margin-top: 1rem; */
   }
 
   .credits div {
@@ -313,6 +301,7 @@ button {
   }
 }
 
+/* Mobile Devices */
 @media (max-width: 768px) {
   .header .title {
     font-size: 2.25rem; /* 36px */
@@ -324,6 +313,7 @@ button {
 
   .summary {
     font-size: 0.875rem; /* 14px */
+    /* margin-top: 0.5rem; */ /* Removed to rely on flex-gap */
   }
 
   .credits {
@@ -335,6 +325,7 @@ button {
   }
 }
 
+/* Small Mobile Devices */
 @media (max-width: 480px) {
   .main-section {
     gap: 1rem; /* 16px */
@@ -350,7 +341,7 @@ button {
 
   .summary {
     font-size: 0.75rem; /* 12px */
-    margin-top: 0.25rem; /* 4px */
+    /* margin-top: 0.25rem; */ /* Removed to rely on flex-gap */
   }
 
   .credits div {
