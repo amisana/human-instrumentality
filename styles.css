@@ -65,7 +65,7 @@ button {
   z-index: 2;
   max-width: 1000px;
   width: 90%;
-  padding: 40px;
+  padding: 2.5rem; /* 40px */
   text-align: center;
   animation: slideUp 1s ease-out forwards;
 }
@@ -78,8 +78,8 @@ button {
 /* Header Styles */
 .header .title {
   font-family: 'Oswald', sans-serif;
-  font-size: 3rem; /* Changed from px to rem */
-  letter-spacing: 0.2em; /* Adjusted for better scaling */
+  font-size: 3rem; /* 48px */
+  letter-spacing: 0.2em;
   margin-bottom: 0.625rem; /* 10px */
   text-transform: uppercase;
   color: #e50914;
@@ -88,7 +88,7 @@ button {
 }
 
 .header .tagline {
-  font-size: 1.25rem; /* Changed from px to rem */
+  font-size: 1.25rem; /* 20px */
   font-style: italic;
   margin-bottom: 1.875rem; /* 30px */
   color: #ddd;
@@ -112,7 +112,7 @@ button {
   max-width: 800px;
   width: 100%;
   position: relative;
-  padding: 56.25% 0 0 0; /* 16:9 aspect ratio for better compatibility */
+  padding: 56.25% 0 0 0; /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
 }
@@ -136,7 +136,7 @@ button {
 .summary {
   flex: 1 1 300px;
   max-width: 600px;
-  font-size: 1rem; /* Changed from px to rem */
+  font-size: 1rem; /* 16px */
   line-height: 1.8;
   background: rgba(255, 255, 255, 0.1);
   padding: 1.25rem; /* 20px */
@@ -213,7 +213,7 @@ button {
   border-radius: 0.3125rem; /* 5px */
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 1rem;
+  font-size: 1rem; /* 16px */
 }
 
 .btn:hover,
@@ -269,8 +269,19 @@ button {
 }
 
 @media (max-width: 768px) {
+  /* Adjust iframe height for tablets and below */
   .modal-content iframe {
     height: 250px;
+  }
+  
+  /* Main Section Adjustments */
+  .main-section {
+    gap: 1.5rem; /* 24px */
+  }
+
+  .summary {
+    font-size: 0.875rem; /* 14px */
+    margin-top: 0.5rem; /* 8px */
   }
 }
 
@@ -278,6 +289,7 @@ button {
   .main-section {
     flex-direction: column;
     align-items: center;
+    gap: 2rem; /* 32px */
   }
 
   .main-section .wistia_responsive_padding {
@@ -287,6 +299,7 @@ button {
 
   .summary {
     max-width: 100%;
+    margin-top: 1rem; /* 16px */
   }
 
   .credits div {
@@ -323,6 +336,10 @@ button {
 }
 
 @media (max-width: 480px) {
+  .main-section {
+    gap: 1rem; /* 16px */
+  }
+
   .header .title {
     font-size: 1.75rem; /* 28px */
   }
@@ -333,6 +350,7 @@ button {
 
   .summary {
     font-size: 0.75rem; /* 12px */
+    margin-top: 0.25rem; /* 4px */
   }
 
   .credits div {
