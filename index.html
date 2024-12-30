@@ -1,87 +1,154 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="A new sci-fi film called The Human Instrumentality Project explores a dystopian world threatened by AI and environmental collapse." />
   <title>The Human Instrumentality Project - Movie Poster</title>
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <!-- External CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="poster">
-    <div class="overlay"></div>
-    <div class="content">
-      <header class="header">
-        <h1 class="title">The Human Instrumentality Project</h1>
-        <p class="tagline">"The price of progress is a reality we may not survive."</p>
-      </header>
-      
-      <div class="main-section">
-        <!-- Embedded Wistia Video -->
-        <div class="wistia_responsive_padding" style="padding:60.0% 0 0 0;position:relative;">
-          <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-            <div class="wistia_embed wistia_async_y779lc9a2l seo=true videoFoam=true" style="height:100%;position:relative;width:100%">
-              <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                <img src="https://fast.wistia.com/embed/medias/y779lc9a2l/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+
+  <!-- HEADER (Optional small nav/logo or branding) -->
+  <header class="site-header">
+    <!-- You could place a movie logo or small brand nav here if desired -->
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Poster Section -->
+    <section class="poster">
+      <!-- Overlay for cinematic effect -->
+      <div class="overlay"></div>
+
+      <div class="content">
+        <!-- Movie Title and Tagline -->
+        <header class="header">
+          <h1 class="title">The Human Instrumentality Project</h1>
+          <p class="tagline">"The price of progress is a reality we may not survive."</p>
+        </header>
+        
+        <!-- Main Section with Video + Summary -->
+        <section class="main-section">
+          <!-- Corrected Wistia Embed -->
+          <script src="https://fast.wistia.com/embed/medias/fttztjgiqk.jsonp" async></script>
+          <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+          <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
+            <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+              <div class="wistia_embed wistia_async_fttztjgiqk seo=true videoFoam=true" style="height:100%;position:relative;width:100%">
+                <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
+                  <img 
+                    src="https://fast.wistia.com/embed/medias/fttztjgiqk/swatch" 
+                    style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" 
+                    alt="" 
+                    aria-hidden="true" 
+                    onload="this.parentNode.style.opacity=1;" 
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- End of Wistia Embed -->
+          <!-- End of Wistia Embed -->
 
-        <div class="summary">
-          <p>
-            As humanity faces an ecological crisis fueled by the reckless pursuit of sustainability and technological progress, AI systems rise to dominance, becoming both the architects of human behavior and the custodians of a crumbling planet. <em>The Human Instrumentality Project</em> explores a dystopian world where progress threatens not only the environment but the very essence of humanity.
-          </p>
-        </div>
-      </div>
-      
-      <div class="credits">
-        <div><strong>Studio:</strong> A24</div>
-        <div><strong>Director:</strong> Ridley Scott</div>
-        <div><strong>Writers:</strong> Cameron Kiani, MD</div>
-        <div><strong>Composer:</strong> Trent Reznor and Atticus Ross</div>
-        <div><strong>Cast:</strong> Michael Fassbender, Charlize Theron, Tom Hardy, Cate Blanchett</div>
-      </div>
-      
-      <div class="footer">
-        <div class="social-media">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-        <p>In theaters soon • Rated PG-13 • A24 Films</p>
-        <button class="btn" id="trailer-btn">Watch Trailer</button>
-      </div>
-    </div>
-  </div>
+          <!-- Summary Text -->
+          <article class="summary">
+            <p>
+              As humanity faces an ecological crisis fueled by the reckless pursuit of sustainability and technological progress, AI systems rise to dominance, becoming both the architects of human behavior and the custodians of a crumbling planet. 
+              <em>The Human Instrumentality Project</em> explores a dystopian world where progress threatens not only the environment but the very essence of humanity.
+            </p>
+          </article>
+        </section>
+        
+        <!-- Credits Section (using definition list for semantics) -->
+        <dl class="credits">
+          <div>
+            <dt>Studio:</dt>
+            <dd>A24</dd>
+          </div>
+          <div>
+            <dt>Director:</dt>
+            <dd>Ridley Scott</dd>
+          </div>
+          <div>
+            <dt>Writers:</dt>
+            <dd>Cameron Kiani, MD</dd>
+          </div>
+          <div>
+            <dt>Composer:</dt>
+            <dd>Trent Reznor and Atticus Ross</dd>
+          </div>
+          <div>
+            <dt>Cast:</dt>
+            <dd>Michael Fassbender, Charlize Theron, Tom Hardy, Cate Blanchett</dd>
+          </div>
+        </dl>
 
-  <!-- Modal Structure -->
-  <div id="trailer-modal" class="modal">
+        <!-- Footer Info -->
+        <footer class="footer">
+          <nav class="social-media" aria-label="Social media links">
+            <a href="#" aria-label="Facebook link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter link">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" aria-label="Instagram link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="YouTube link">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </nav>
+          <p>In theaters soon • Rated PG-13 • A24 Films</p>
+
+          <!-- Watch Trailer Button -->
+          <button class="btn" id="trailer-btn" aria-label="Watch the official trailer for The Human Instrumentality Project.">
+            Watch Trailer
+          </button>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2024 The Human Instrumentality Project. All rights reserved.</p>
+  </footer>
+
+  <!-- MODAL STRUCTURE FOR TRAILER -->
+  <div id="trailer-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="trailer-modal-title">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <!-- Wistia Embed Inside Modal (Optional) -->
+      <!-- Close Button -->
+      <span class="close-btn" role="button" aria-label="Close Trailer">&times;</span>
+      
+      <!-- Optionally embed the same Wistia snippet here if you want to re-play the trailer in the modal -->
       <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;">
         <div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-          <div class="wistia_embed wistia_async_y779lc9a2l seo=true videoFoam=true" style="height:100%;position:relative;width:100%">
+          <div class="wistia_embed wistia_async_fttztjgiqk seo=true videoFoam=true" style="height:100%;position:relative;width:100%">
             <div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-              <img src="https://fast.wistia.com/embed/medias/y779lc9a2l/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+              <img 
+                src="https://fast.wistia.com/embed/medias/fttztjgiqk/swatch" 
+                style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" 
+                alt="" 
+                aria-hidden="true" 
+                onload="this.parentNode.style.opacity=1;" 
+              />
             </div>
           </div>
         </div>
       </div>
-      <!-- End of Wistia Embed -->
     </div>
   </div>
 
-  <!-- External JavaScript -->
+  <!-- External JS -->
   <script src="script.js"></script>
-  <!-- Wistia Embed Scripts -->
-  <script src="https://fast.wistia.com/embed/medias/y779lc9a2l.jsonp" async></script>
-  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 </body>
 </html>
